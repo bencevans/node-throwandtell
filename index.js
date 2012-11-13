@@ -3,7 +3,6 @@ var request = require('request');
 
 var defaultConfig = {
   server: {host:'throwandtell.com', port:80},
-  saveUncaught: false,
   autoHookUncaught: true,
   accessKey: null,
   verbose: true
