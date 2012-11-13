@@ -1,0 +1,26 @@
+{
+  "name": "throwandtell",
+  "version": "0.0.0",
+  "description": "ThrowAndTell Error Reporter Client for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "error",
+    "err",
+    "report",
+    "reporting",
+    "throw",
+    "tell",
+    "github",
+    "catch",
+    "auto"
+  ],
+  "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.11.4"
+  }
+}
