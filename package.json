@@ -19,7 +19,7 @@
     "auto"
   ],
   "author": "Ben Evans <ben@bensbit.co.uk> (http://bensbit.co.uk)",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "request": "~2.11.4"
   }
