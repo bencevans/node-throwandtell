@@ -8,41 +8,47 @@ ThowAndTell(.com) Node.js Error Reporting Client.
 
 ## Usage
 
-    var ThrowAndTell = require('throwandtell');
-    var options = {
+```javascript
+var ThrowAndTell = require('throwandtell');
+var options = {
 
-      // Key Given in ThrowAndTell(.com) Dashboard
-      accessKey: process.env.THROWANDTELL_ACCESSKEY || 'PLACE_KEY_HERE'
+  // Key Given in ThrowAndTell(.com) Dashboard
+  accessKey: process.env.THROWANDTELL_ACCESSKEY || 'PLACE_KEY_HERE'
 
-      // By default ThrowAndTell adds a listner for uncaught Errors
-      // to disable this, use:
-      //
-      // autoHookUncaught: false
-      //
-      
-      // If you would like to use a host other than 'throwandtell.com' then follow:
-      //
-      // server: {
-      //   host: 'YOUR_HOST',
-      //   port: 80
-      // }
-    }
-    var throwandtell = new ThrowAndTell(options);
+  // By default ThrowAndTell adds a listner for uncaught Errors
+  // to disable this, use:
+  //
+  // autoHookUncaught: false
+  //
+  
+  // If you would like to use a host other than 'throwandtell.com' then follow:
+  //
+  // server: {
+  //   host: 'YOUR_HOST',
+  //   port: 80
+  // }
+
+}
+var throwandtell = new ThrowAndTell(options);
+```
 
 You can **automaticly report** uncaught errors  when `options.autoHookUncaught === true`. Here's one:
 
-    throw new Error("Test Error");
+```javascript
+throw new Error("Test Error");
+```
 
 You can **manually report** errors with:
 
-    throwandtell.report(err);
+```javascript
+throwandtell.report(err);
 
-    // Or with a callback (errWhenReporting)
+// Or with a callback (errWhenReporting)
 
-    throwandtell.report(err, function() {
-      if(reportErr) SCCCRRREEEEAAAAAM(); // With SCCCRRREEEEAAAAAM being a valid function of course!
-    });
-
+throwandtell.report(err, function() {
+  if(reportErr) SCCCRRREEEEAAAAAM(); // With SCCCRRREEEEAAAAAM being a valid function of course!
+});
+```
 ##Licence
 
 (The MIT Licence)
