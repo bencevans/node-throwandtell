@@ -5,7 +5,8 @@ var defaultConfig = {
   server: {host:'throwandtell.com', port:80},
   saveUncaught: false,
   autoHookUncaught: true,
-  accessKey: null
+  accessKey: null,
+  verbose: true
 };
 
 var ThrowAndTell = function(config) {
@@ -24,11 +25,10 @@ var ThrowAndTell = function(config) {
 ThrowAndTell.prototype.hookUncaught = function() {
   var self = this;
   process.on('uncaughtException', function(err) {
-    console.log('Caught');
-    console.log(err);
-    self.report(err, function(err) {
-      if(err) return console.warn('ThrowAndTell: Unable to Report Error due to:', err);
-      console.log(err + ' has been reported by ThrowAndTell');
+    if(self.config.verbose) console.log('Caught \'' + err.message + '\'');
+    self.report(err, function(fail) {
+      if(fail) return console.warn('ThrowAndTell: Unable to Report Error due to:', ok);
+      if(self.config.verbose) console.log('\'' + err.message + '\' has been reported to ThrowAndTell');
     });
   });
 };
