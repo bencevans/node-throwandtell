@@ -1,7 +1,7 @@
 {
   "name": "throwandtell",
   "version": "0.1.0",
-  "description": "ThrowAndTell Error Reporter Client for Node.js",
+  "description": "ThrowAndTell(.com) Error Reporting Client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
